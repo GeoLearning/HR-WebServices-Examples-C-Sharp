@@ -1,0 +1,29 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="36A2A08F-CE88-43B4-A980-FF76F302A9FB/f:AlwaysValidCertificateValidator.cs" caret="379" fromTop="12" />
+      <File id="36A2A08F-CE88-43B4-A980-FF76F302A9FB/f:ICertificateValidator.cs" caret="290" fromTop="9" />
+      <File id="36A2A08F-CE88-43B4-A980-FF76F302A9FB/f:Settings.xml" caret="651" fromTop="15" />
+      <File id="36A2A08F-CE88-43B4-A980-FF76F302A9FB/f:WebServicesSOAPTests.cs" caret="1999" fromTop="70" />
+      <File id="36A2A08F-CE88-43B4-A980-FF76F302A9FB/f:TestUtilityServices.cs" caret="438" fromTop="0" />
+      <File id="36A2A08F-CE88-43B4-A980-FF76F302A9FB/f:WebServices.cs" caret="44239" fromTop="42" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="36A2A08F-CE88-43B4-A980-FF76F302A9FB/f:Settings.xml" caret="484" fromTop="9" />
+      <File id="36A2A08F-CE88-43B4-A980-FF76F302A9FB/f:Settings.xml" caret="412" fromTop="8" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+</Configuration>

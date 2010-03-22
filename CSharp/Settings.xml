@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+  <connection>
+    <url>http://localhost/geonext/webservices/geonext.asmx?wsdl</url>
+    <username>geoadmin</username>
+    <password>Password2@</password>
+  </connection>
+  
+  <!-- These settings should align to existing objects and settings in the target LMS -->
+  <user>
+    <password>Password2!</password>
+    <!--<role>Administrator</role>-->
+    <role>Supervisor</role>
+    <location>QA_Location1</location>
+    <group>Group1</group>
+    <cua>
+      <name>Test dropdown field</name>
+      <value>Not an option</value>
+    </cua>
+    <cusa>
+      <name>Niko-Niko</name>
+      <value>Happy</value>
+    </cusa>
+    <cac>QA_Code1</cac>
+  </user>
+</settings>
