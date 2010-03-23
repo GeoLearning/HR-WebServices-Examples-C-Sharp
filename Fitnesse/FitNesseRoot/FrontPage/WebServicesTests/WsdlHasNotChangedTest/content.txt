@@ -1,0 +1,12 @@
+|Wsdl Has Not Changed Test|
+
+!include .IncludedPages.ConfigureWebServices
+
+!4 Some Web service clients (like Apache Axis) compile the wsdl into proxy objects. Axis has major problems when the wsdl has changed, even if those changes are 'backwards compatible'.
+!2 If this test fails and we are going forward with the changes product management needs to get involved to communicate with clients.
+
+
+
+| The Current WSDL on the server matches the last known good WSDL |
+
+

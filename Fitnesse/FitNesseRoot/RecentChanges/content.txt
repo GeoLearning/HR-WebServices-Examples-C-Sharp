@@ -1,0 +1,16 @@
+|FrontPage||08:30:42 Fri, Feb 12, 2010|
+|FrontPage.WebServicesTests||15:30:11 Thu, Feb 11, 2010|
+|IncludedPages.ConfigureWebServices||15:30:03 Thu, Feb 11, 2010|
+|FrontPage.WebServicesTests.WsdlHasNotChangedTest||15:27:34 Thu, Feb 11, 2010|
+|FrontPage.WebServicesTests.ConfirmNonRequiredValidations||14:31:46 Thu, Feb 11, 2010|
+|FrontPage.WebServicesTests.CanSaveAndLoadFullUserObject||14:29:10 Thu, Feb 11, 2010|
+|FrontPage.WebServicesTests.CanCheckIfUserExists||14:24:16 Fri, Feb 05, 2010|
+|FrontPage.WebServicesTests.ConfirmRequiredFields||14:20:32 Fri, Feb 05, 2010|
+|FrontPage.WebServicesTests.ConfirmRequiredFields.ErrorOnNoUserName||16:27:05 Wed, Feb 03, 2010|
+|FrontPage.WebServicesTests.ConfirmNonRequiredValidations.WarningOnCacDoesNotExist||16:24:46 Wed, Feb 03, 2010|
+|FrontPage.WebServicesTests.ConfirmNonRequiredValidations.WarningOnCsuaDoesNotExist||16:21:55 Wed, Feb 03, 2010|
+|FrontPage.WebServicesTests.ConfirmNonRequiredValidations.WarningOnCuaDoesNotExist||13:47:05 Wed, Feb 03, 2010|
+|FrontPage.WebServicesTests.ConfirmNonRequiredValidations.WarningOnGroupDoesNotExist||13:45:52 Wed, Feb 03, 2010|
+|FrontPage.WebServicesTests.ConfirmNonRequiredValidations.WarningOnLanguageDoesNotExist||13:44:42 Wed, Feb 03, 2010|
+|FrontPage.WebServicesTests.ConfirmNonRequiredValidations.WarningOnSupervisorDoesNotExist||13:42:50 Wed, Feb 03, 2010|
+|FrontPage.WebServicesTests.ConfirmNonRequiredValidations.WarningOnTimeZoneDoesNotExist||13:42:30 Wed, Feb 03, 2010|

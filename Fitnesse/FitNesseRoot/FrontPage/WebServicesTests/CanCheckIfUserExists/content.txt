@@ -1,0 +1,26 @@
+|Can Check If User Exists|
+
+!include .IncludedPages.ConfigureWebServices
+
+|User Name       |021E9F08-C380-480e-B683-658A521E9BA9|Exists|False|
+|User Unique Id  |021E9F08-C380-480e-B683-658A521E9BA9|Exists|False|
+|User External Id|021E9F08-C380-480e-B683-658A521E9BA9|Exists|False|
+|User Name       |${webServiceUserName}               |Exists|True |
+
+
+!2 Create a good User
+|User Name   |(RANDOM)   |
+|Unique Id   |(RANDOM)   |
+|Password    |Password1! |
+|First Name  |Pete       |
+|Last Name   |Mc Pete    |
+|Email       |a@b.com    |
+|Role        |Learner    |
+|Default Role|Learner    |
+|Check       |Create|True|
+
+|External Id For Last Created User Exists|True|
+
+!2 This test will only pass if unique ID has been set to "required"
+|Unique Id For Last Created User Exists|True|
+

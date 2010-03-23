@@ -1,0 +1,280 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:AlwaysValidCertificateValidator.cs" caret="105" fromTop="3" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:ICertificateValidator.cs" caret="112" fromTop="3" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:WarninngResultValidator.cs" caret="634" fromTop="28" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:CanCheckIfUserExists.cs" caret="454" fromTop="13" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:WebService.cs" caret="0" fromTop="0" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:CreateUpdateNewUser.cs" caret="3537" fromTop="25" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:ConfirmNonRequiredValidations.cs" caret="0" fromTop="0" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:InspectUserRowFixture.cs" caret="1086" fromTop="4" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:WsdlHasNotChangedTest.cs" caret="1032" fromTop="33" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:WebServiceTestBase.cs" caret="1265" fromTop="44" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:WebServiceTestBase.cs" caret="1387" fromTop="29" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:WebServiceTestBase.cs" caret="1423" fromTop="33" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:WebServiceTestBase.cs" caret="1423" fromTop="5" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:InspectUserRowFixture.cs" caret="306" fromTop="9" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:InspectUserRowFixture.cs" caret="2241" fromTop="25" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:InspectUserRowFixture.cs" caret="2026" fromTop="21" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:InspectUserRowFixture.cs" caret="456" fromTop="19" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:WebServiceTestBase.cs" caret="861" fromTop="12" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:CanCheckIfUserExists.cs" caret="57" fromTop="1" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:InspectUserRowFixture.cs" caret="272" fromTop="10" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:InspectUserRowFixture.cs" caret="1845" fromTop="24" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:WebServiceTestBase.cs" caret="1411" fromTop="11" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:InspectUserRowFixture.cs" caret="1084" fromTop="18" />
+      <File id="2D194BA6-BEC5-49AA-B244-CA70577FF85B/f:WsdlHasNotChangedTest.cs" caret="940" fromTop="31" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="public" priority="30" />
+      <Item value="void" priority="6" />
+      <Item value="string" priority="38" />
+      <Item value="url" priority="0" />
+      <Item value="ServiceUserName" priority="0" />
+      <Item value="username" priority="1" />
+      <Item value="ServicePassword" priority="0" />
+      <Item value="password" priority="0" />
+      <Item value="bool" priority="9" />
+      <Item value="WebServices" priority="1" />
+      <Item value="new" priority="29" />
+      <Item value="GeoMaestroServices" priority="11" />
+      <Item value="ServiceURL" priority="0" />
+      <Item value="return" priority="25" />
+      <Item value="true" priority="2" />
+      <Item value="CreateUserTestColumnFixture" priority="1" />
+      <Item value="var" priority="7" />
+      <Item value="Services" priority="2" />
+      <Item value="emptyUser" priority="27" />
+      <Item value="UserName" priority="5" />
+      <Item value="Password" priority="2" />
+      <Item value="FirstName" priority="1" />
+      <Item value="LastName" priority="1" />
+      <Item value="Role" priority="0" />
+      <Item value="Supervisor" priority="0" />
+      <Item value="Group" priority="2" />
+      <Item value="Name" priority="3" />
+      <Item value="result" priority="3" />
+      <Item value="if" priority="9" />
+      <Item value="GetLength" priority="0" />
+      <Item value="Length" priority="2" />
+      <Item value="private" priority="3" />
+      <Item value="Result" priority="5" />
+      <Item value="System" priority="0" />
+      <Item value="Diagnostics" priority="0" />
+      <Item value="Debugger" priority="0" />
+      <Item value="Email" priority="1" />
+      <Item value="WarninngResultValidator" priority="0" />
+      <Item value="class" priority="0" />
+      <Item value="typeof" priority="2" />
+      <Item value="Linq" priority="0" />
+      <Item value="WarningErrorString" priority="0" />
+      <Item value="Message" priority="0" />
+      <Item value="OfType" priority="0" />
+      <Item value="foo" priority="0" />
+      <Item value="ErrorsResultValidator" priority="1" />
+      <Item value="TimeZone" priority="1" />
+      <Item value="Language" priority="1" />
+      <Item value="CustomUserAttribute" priority="5" />
+      <Item value="Value" priority="3" />
+      <Item value="Cac" priority="0" />
+      <Item value="protected" priority="1" />
+      <Item value="override" priority="1" />
+      <Item value="UpdateUserCompletedEventHandler" priority="0" />
+      <Item value="UpdateUserTestColumnFixture" priority="0" />
+      <Item value="Tester" priority="6" />
+      <Item value="HydrateUser" priority="1" />
+      <Item value="userObject" priority="2" />
+      <Item value="s" priority="0" />
+      <Item value="else" priority="0" />
+      <Item value="IFormattable" priority="0" />
+      <Item value="columnValue" priority="1" />
+      <Item value="DefaultRole" priority="0" />
+      <Item value="false" priority="0" />
+      <Item value="WebServiceTestBase" priority="2" />
+      <Item value="XmlDocument" priority="3" />
+      <Item value="knownGood" priority="0" />
+      <Item value="serverWsdl" priority="0" />
+      <Item value="WebRequest" priority="0" />
+      <Item value="request" priority="1" />
+      <Item value="remoteWsdl" priority="2" />
+      <Item value="response" priority="0" />
+      <Item value="StringWriter" priority="0" />
+      <Item value="GetWsdlFromServer" priority="0" />
+      <Item value="lastKnownGoodWsdl" priority="0" />
+      <Item value="content" priority="0" />
+      <Item value="expectedResult" priority="1" />
+      <Item value="UserUniqueId" priority="0" />
+      <Item value="LastCreatedUser" priority="6" />
+      <Item value="UniqueId" priority="0" />
+      <Item value="InspectUserRowFixture" priority="0" />
+      <Item value="internal" priority="0" />
+      <Item value="String" priority="0" />
+      <Item value="ResultBean" priority="1" />
+      <Item value="results" priority="2" />
+      <Item value="Field" priority="0" />
+      <Item value="FieldAccessException" priority="0" />
+      <Item value="field" priority="0" />
+      <Item value="User" priority="3" />
+      <Item value="Add" priority="21" />
+      <Item value="bob" priority="13" />
+      <Item value="foreach" priority="6" />
+      <Item value="groupName" priority="0" />
+      <Item value="csua" priority="2" />
+      <Item value="supervisorUserName" priority="0" />
+      <Item value="virtual" priority="0" />
+      <Item value="repull" priority="1" />
+      <Item value="CreateUpdateNewUser" priority="0" />
+      <Item value="Listener" priority="1" />
+      <Item value="List&lt;CustomUserAttribute&gt;" priority="0" />
+      <Item value="list" priority="1" />
+      <Item value="nameAndValue" priority="1" />
+      <Item value="StreetAddress" priority="0" />
+      <Item value="StreetAddress2" priority="0" />
+      <Item value="Telephone" priority="0" />
+      <Item value="Counts" priority="0" />
+      <Item value="Country" priority="0" />
+      <Item value="State" priority="0" />
+      <Item value="PostalCode" priority="0" />
+      <Item value="PostalCodeType" priority="6" />
+      <Item value="ZipCode" priority="0" />
+      <Item value="ZipCodeType" priority="1" />
+      <Item value="Enum" priority="0" />
+      <Item value="City" priority="0" />
+      <Item value="Extension" priority="0" />
+      <Item value="LocationName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WebServices">
+      <Item value="Url" priority="2" />
+      <Item value="GenerateUserObject" priority="0" />
+      <Item value="CreateUser" priority="0" />
+      <Item value="LoadUser" priority="3" />
+      <Item value="UpdateUser" priority="1" />
+      <Item value="Credentials" priority="1" />
+      <Item value="UserExists" priority="0" />
+      <Item value="UserExistsByUniqueId" priority="0" />
+      <Item value="UserExistsByExternalId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:User">
+      <Item value="UserName" priority="7" />
+      <Item value="Password" priority="0" />
+      <Item value="FirstName" priority="1" />
+      <Item value="LastName" priority="1" />
+      <Item value="RoleNames" priority="1" />
+      <Item value="DefaultRoleName" priority="1" />
+      <Item value="SupervisorUserNames" priority="0" />
+      <Item value="Groups" priority="0" />
+      <Item value="Email" priority="1" />
+      <Item value="TimeZone" priority="1" />
+      <Item value="Language" priority="1" />
+      <Item value="CustomUserAttributes" priority="0" />
+      <Item value="CustomSelectUserAttributes" priority="1" />
+      <Item value="CatalogAccessCodeNames" priority="0" />
+      <Item value="UniqueId" priority="2" />
+      <Item value="ExternalId" priority="1" />
+      <Item value="StreetAddress" priority="1" />
+      <Item value="StreetAddress2" priority="1" />
+      <Item value="Telephone" priority="1" />
+      <Item value="Country" priority="1" />
+      <Item value="State" priority="1" />
+      <Item value="PostalCode" priority="1" />
+      <Item value="PostalCodeType" priority="1" />
+      <Item value="City" priority="1" />
+      <Item value="Extension" priority="1" />
+      <Item value="LocationName" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Guid">
+      <Item value="NewGuid" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Guid">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserResult">
+      <Item value="Warnings" priority="0" />
+      <Item value="Errors" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.Debugger">
+      <Item value="Launch" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsNullOrEmpty" priority="9" />
+      <Item value="Empty" priority="0" />
+      <Item value="Format" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WebServiceTestBase">
+      <Item value="GeoMaestroServices" priority="0" />
+      <Item value="Result" priority="2" />
+      <Item value="RecentUserName" priority="1" />
+      <Item value="LastCreatedUser" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Result">
+      <Item value="Warnings" priority="0" />
+      <Item value="Errors" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="ToArray" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Equals" priority="1" />
+      <Item value="Split" priority="1" />
+      <Item value="ToLower" priority="0" />
+      <Item value="Replace" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.XmlDocument">
+      <Item value="Load" priority="0" />
+      <Item value="LoadXml" priority="1" />
+      <Item value="InnerXml" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Net.WebRequest">
+      <Item value="Create" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.WebRequest">
+      <Item value="Credentials" priority="0" />
+      <Item value="GetResponse" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.ICredentials">
+      <Item value="GetCredential" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add" priority="1" />
+      <Item value="ToArray" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IList`1">
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Group">
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomUserAttribute">
+      <Item value="Name" priority="0" />
+      <Item value="Value" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@PostalCodeType">
+      <Item value="Undefined" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Enum">
+      <Item value="Parse" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PostalCodeType">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

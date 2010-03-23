@@ -1,0 +1,7 @@
+C:\Maestro5\integration\ClientIntegrations\bin\Release\ClientIntegrations.dll
+C:\Maestro5\integration\ClientIntegrations\bin\Release\ClientIntegrations.pdb
+C:\Maestro5\integration\ClientIntegrations\bin\Release\fit.dll
+C:\Maestro5\integration\ClientIntegrations\bin\Release\FitLibrary.dll
+C:\Maestro5\integration\ClientIntegrations\obj\Release\ResolveAssemblyReference.cache
+C:\Maestro5\integration\ClientIntegrations\obj\Release\ClientIntegrations.dll
+C:\Maestro5\integration\ClientIntegrations\obj\Release\ClientIntegrations.pdb

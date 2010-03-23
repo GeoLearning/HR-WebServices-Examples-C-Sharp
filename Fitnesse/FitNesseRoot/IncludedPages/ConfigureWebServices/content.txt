@@ -1,0 +1,2 @@
+
+|Create Service with URL | ${webServiceUrl} | User Name | ${webServiceUserName}| Password | ${webServicePassword}|

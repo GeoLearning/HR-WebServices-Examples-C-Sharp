@@ -1,0 +1,54 @@
+|Create Update New User|
+
+!include .IncludedPages.ConfigureWebServices
+
+|User Name   |(RANDOM)          |
+|First Name  |Martin            |
+|Last Name   |Van Bruin         |
+|Email       |a@b.com           |
+|Role        |Learner           |
+|Default Role|Learner           |
+|Supervisor  |Dr.Rosenrosen     |
+|CAC         |Non Cac           |
+|Csua        |Non Csua:non value|
+|Cua         |Non Cua:non value |
+|Group       |Non Group         |
+|Language    |pg-LT             |
+|Time Zone   |Middle Earth/Shire|
+|Check       |Create    |True   |
+
+|Results Contain Warnings                              |
+|Message                                               |
+|Supervisor: 'Dr.Rosenrosen' does not exist.           |
+|Group: 'Non Group' does not exist.                    |
+|Language Code: pg-LT does not exist.                  |
+|Time Zone: Middle Earth/Shire does not exist.         |
+|Custom User Attribute: 'Non Cua' does not exist.      |
+|Custom Select User Attribute: Non Csua does not exist.|
+|Catalog Access Code: Non Cac does not exist.          |
+
+|Results Contain Errors|
+|Message               |
+
+!2 Update
+|CAC      |Non Cac           |
+|Csua     |Non Csua:Non Value|
+|Cua      |Non Cua:Non Value |
+|Group    |Non Group         |
+|Language |pg-LT             |
+|Time Zone|Middle Earth/Shire|
+|Check    |Update    |True   |
+
+|Results Contain Warnings                              |
+|Message                                               |
+|Supervisor: 'Dr.Rosenrosen' does not exist.           |
+|Group: 'Non Group' does not exist.                    |
+|Language Code: pg-LT does not exist.                  |
+|Time Zone: Middle Earth/Shire does not exist.         |
+|Custom User Attribute: 'Non Cua' does not exist.      |
+|Custom Select User Attribute: Non Csua does not exist.|
+|Catalog Access Code: Non Cac does not exist.          |
+
+|Results Contain Errors|
+|Message               |
+

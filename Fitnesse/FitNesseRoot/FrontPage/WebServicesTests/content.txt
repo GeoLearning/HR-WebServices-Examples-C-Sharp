@@ -1,0 +1,5 @@
+!define webServiceUrl {https://pub1.geolearning.com/geonext/geo_testing/webservices/geonext.asmx?wsdl} 
+!define webServiceUserName {myusername}
+!define webServicePassword {mypassword}
+
+!contents -R2 -g -p -f -h

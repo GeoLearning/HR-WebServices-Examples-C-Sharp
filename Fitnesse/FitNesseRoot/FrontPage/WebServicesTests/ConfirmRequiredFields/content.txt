@@ -1,0 +1,55 @@
+|Create Update New User|
+
+!include .IncludedPages.ConfigureWebServices
+
+|Check|Create|False|
+
+|Results Contain Warnings|
+|Message                 |
+
+|Results Contain Errors            |
+|Message                           |
+|'First Name' must be specified.   |
+|'Last Name' must be specified.    |
+|'Email Address' must be specified.|
+|'Roles' contains no valid values. |
+|'Default Role' is null.           |
+|'User Name' must be specified.    |
+
+
+!2 Create a good User
+|User Name   |(RANDOM)   |
+|Password    |Password1! |
+|First Name  |Pete       |
+|Last Name   |Mc Pete    |
+|Email       |a@b.com    |
+|Role        |Learner    |
+|Default Role|Learner    |
+|Check       |Create|True|
+
+|Results Contain Warnings|
+|Message                 |
+
+|Results Contain Errors|
+|Message               |
+
+
+!2Update Existing User  
+|Password | |
+|First Name  ||
+|Last Name   ||
+|Email       ||
+|Check       |Update|False|
+
+
+|Results Contain Warnings|
+|Message                 |
+
+|Results Contain Errors            |
+|Message                           |
+|'First Name' must be specified.   |
+|'Last Name' must be specified.    |
+|'Email Address' must be specified.|
+
+
+
