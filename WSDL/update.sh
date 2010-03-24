@@ -7,7 +7,6 @@
 # Update the wsdl
 wget http://localhost/geonext/webservices/geonext.asmx?WSDL --user=username --password=Password --output-document=GeoNext.wsdl --no-check-certificate
 # Generate new C# 
-#stubswsdl GeoNext.wsdl /out:../CSharp/
+stubswsdl GeoNext.wsdl /out:../CSharp/
 
-# Generate new Java stub../Java/src/com/geolearning/geonext/webservices/WebServicesWebServicesSoap * 
-./axis/bin/wsdl2java.sh -uri GeoNext.wsdl -o ../Java/GeolearningJavaExample/
+
