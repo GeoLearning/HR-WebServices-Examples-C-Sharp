@@ -1,7 +1,0 @@
-C:\Maestro5\integration\ClientIntegrations\bin\Debug\ClientIntegrations.dll
-C:\Maestro5\integration\ClientIntegrations\bin\Debug\ClientIntegrations.pdb
-C:\Maestro5\integration\ClientIntegrations\bin\Debug\fit.dll
-C:\Maestro5\integration\ClientIntegrations\bin\Debug\FitLibrary.dll
-C:\Maestro5\integration\ClientIntegrations\obj\Debug\ResolveAssemblyReference.cache
-C:\Maestro5\integration\ClientIntegrations\obj\Debug\ClientIntegrations.dll
-C:\Maestro5\integration\ClientIntegrations\obj\Debug\ClientIntegrations.pdb
