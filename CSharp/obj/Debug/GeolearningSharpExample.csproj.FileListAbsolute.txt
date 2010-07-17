@@ -1,7 +1,0 @@
-C:\Maestro5\maestro\Documentation\WebServices\Examples\CSharp\bin\Debug\Settings.xml
-C:\Maestro5\maestro\Documentation\WebServices\Examples\CSharp\bin\Debug\GeolearningSharpExample.exe
-C:\Maestro5\maestro\Documentation\WebServices\Examples\CSharp\bin\Debug\GeolearningSharpExample.pdb
-C:\Maestro5\maestro\Documentation\WebServices\Examples\CSharp\bin\Debug\nunit.framework.dll
-C:\Maestro5\maestro\Documentation\WebServices\Examples\CSharp\obj\Debug\ResolveAssemblyReference.cache
-C:\Maestro5\maestro\Documentation\WebServices\Examples\CSharp\obj\Debug\GeolearningSharpExample.exe
-C:\Maestro5\maestro\Documentation\WebServices\Examples\CSharp\obj\Debug\GeolearningSharpExample.pdb
