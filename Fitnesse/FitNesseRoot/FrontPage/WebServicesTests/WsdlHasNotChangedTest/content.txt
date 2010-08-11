@@ -5,8 +5,12 @@
 !4 Some Web service clients (like Apache Axis) compile the wsdl into proxy objects. Axis has major problems when the wsdl has changed, even if those changes are 'backwards compatible'.
 !2 If this test fails and we are going forward with the changes product management needs to get involved to communicate with clients.
 
+Notes:
+* Some versions of IIS will make slightly different changes to the namespaces. This test is optimized for IIS on windows server 2008
+* If you DO need to update the WSDL, make sure the locations are 'localhost' for the test to pass.
 
 
-| The Current WSDL on the server matches the last known good WSDL |
 
+|The Current WSDL on the server matches the last known good WSDL |
+|message|
 
