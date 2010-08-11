@@ -2,7 +2,7 @@
 !define TEST_RUNNER {dotnet\FitServer.exe}
 !define PATH_SEPARATOR {;}
 
-!path .\ClientIntegrations\bin\debug\ClientIntegrations.dll
+
 !path .\dotnet\*.dll
 
 
