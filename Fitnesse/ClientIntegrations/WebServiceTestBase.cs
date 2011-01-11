@@ -19,7 +19,7 @@ public class WebServiceTestBase : DoFixture
         GeoMaestroServices = new WebServices
                                  {
                                      Url = url,
-                                     Credentials = new System.Net.NetworkCredential(username, password)
+                                     Credentials = new NetworkCredential(username, password)
                                  };
 
     }

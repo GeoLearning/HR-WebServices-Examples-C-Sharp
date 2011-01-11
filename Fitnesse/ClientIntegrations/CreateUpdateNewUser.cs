@@ -25,11 +25,14 @@ public class CreateUpdateNewUser : WebServiceTestBase
     public string DefaultRole { get; set; }
     public string Supervisor { get; set; }
     public string Group { get; set; }
+    public string GroupByCode { get; set; }
     public string Cua { get; set; }
     public string Csua { get; set; }
     public string Language { get; set; }
     public string TimeZone { get; set; }
     public string Cac { get; set; }
+    public string DirectSupervisor { get; set; }
+    public string DefaultGroup { get; set; }
 
     public virtual bool Create()
     {
@@ -73,11 +76,13 @@ public class CreateUpdateNewUser : WebServiceTestBase
         emptyUser.RoleNames = GetBlankOrValueArray(Role);
         emptyUser.DefaultRoleName = DefaultRole;
         emptyUser.SupervisorUserNames = GetBlankOrValueArray(Supervisor);
-        emptyUser.Groups = GetBlankOrValueGroupArray(Group);
+        emptyUser.Groups = GetBlankOrValueGroupArray(Group, GroupByCode, DefaultGroup);
         emptyUser.CustomUserAttributes = GetBlankOrValueCuaArray(Cua);
         emptyUser.CustomSelectUserAttributes = GetBlankOrValueCuaArray(Csua);
         emptyUser.CatalogAccessCodeNames = GetBlankOrValueArray(Cac);
-
+        emptyUser.DirectSupervisorName = DirectSupervisor;
+        
+       
     }
 
     private PostalCodeType GetPostalCodeType()
@@ -104,13 +109,21 @@ public class CreateUpdateNewUser : WebServiceTestBase
         return list.ToArray();
     }
 
-    private static Group[] GetBlankOrValueGroupArray(string columnValue)
+    private static Group[] GetBlankOrValueGroupArray(string groupNames, string groupByCode, string defaultCode)
     {
-        if (string.IsNullOrEmpty(columnValue))
+        var groupAray = new List<Group>();
+
+        if (!string.IsNullOrEmpty(groupNames))
         {
-            return new Group[] { };
+            groupAray.AddRange(groupNames.Split(',').Select(x => new Group { Name = x, IsDefault = x == defaultCode}).ToArray());
         }
-        return columnValue.Split(',').Select(x => new Group() { Name = x }).ToArray();
+
+        if (!string.IsNullOrEmpty(groupByCode))
+        {
+            groupAray.AddRange(groupByCode.Split(',').Select(x => new Group { Code = x, IsDefault = x == defaultCode }).ToArray());
+        }
+
+        return groupAray.ToArray();
     }
 
     private static string[] GetBlankOrValueArray(string columnValue)

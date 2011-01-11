@@ -56,6 +56,7 @@ public class InspectUserRowFixture : RowFixture
         {
             Add("Supervisor",supervisorUserName);
         }
+        Add("Direct Supervisor",bob.DirectSupervisorName);
 
         return results.ToArray();
     }

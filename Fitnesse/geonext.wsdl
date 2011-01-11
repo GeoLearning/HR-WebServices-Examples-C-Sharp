@@ -1,517 +1,517 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://geolearning.com/geonext/webservices/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://geolearning.com/geonext/webservices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> 
-  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Welcome to the GeoMaestro Web Service API. The following methods are available for integrating your application with Maestro.</wsdl:documentation> 
-  <wsdl:types> 
-    <s:schema elementFormDefault="qualified" targetNamespace="http://geolearning.com/geonext/webservices/"> 
-      <s:element name="UserExistsByExternalId"> 
-        <s:complexType> 
-          <s:sequence> 
-            <s:element minOccurs="0" maxOccurs="1" name="externalId" type="s:string" /> 
-          </s:sequence> 
-        </s:complexType> 
-      </s:element> 
-      <s:element name="UserExistsByExternalIdResponse"> 
-        <s:complexType> 
-          <s:sequence> 
-            <s:element minOccurs="1" maxOccurs="1" name="UserExistsByExternalIdResult" type="s:boolean" /> 
-          </s:sequence> 
-        </s:complexType> 
-      </s:element> 
-      <s:element name="LoadUserByExternalId"> 
-        <s:complexType> 
-          <s:sequence> 
-            <s:element minOccurs="0" maxOccurs="1" name="externalId" type="s:string" /> 
-          </s:sequence> 
-        </s:complexType> 
-      </s:element> 
-      <s:element name="LoadUserByExternalIdResponse"> 
-        <s:complexType> 
-          <s:sequence> 
-            <s:element minOccurs="0" maxOccurs="1" name="LoadUserByExternalIdResult" type="tns:User" /> 
-          </s:sequence> 
-        </s:complexType> 
-      </s:element> 
-      <s:complexType name="User"> 
-        <s:complexContent mixed="false"> 
-          <s:extension base="tns:PersistentOfUserUserUserResult"> 
-            <s:sequence> 
-              <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="MiddleInitial" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="StreetAddress" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="StreetAddress2" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" /> 
-              <s:element minOccurs="1" maxOccurs="1" name="PostalCodeType" type="tns:PostalCodeType" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="Extension" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="LocationName" type="s:string" /> 
-              <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" /> 
-              <s:element minOccurs="1" maxOccurs="1" name="BirthDate" type="s:dateTime" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="SocialSecurityNumber" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="SupervisorUserNames" type="tns:ArrayOfString" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="Groups" type="tns:ArrayOfGroup" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="RoleNames" type="tns:ArrayOfString" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="DefaultRoleName" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="ExternalId" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="TimeZone" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="Language" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="EHRIEmployeeID" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="AgencySubElementCode" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="DoChangePasswordNextLogin" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="UniqueId" type="s:string" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="CustomUserAttributes" type="tns:ArrayOfCustomUserAttribute" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="CustomSelectUserAttributes" type="tns:ArrayOfCustomUserAttribute" /> 
-              <s:element minOccurs="0" maxOccurs="1" name="CatalogAccessCodeNames" type="tns:ArrayOfString" /> 
-            </s:sequence> 
-          </s:extension> 
-        </s:complexContent> 
-      </s:complexType> 
-      <s:complexType name="PersistentOfUserUserUserResult" abstract="true"> 
-        <s:sequence> 
-          <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:Status" /> 
-          <s:element minOccurs="1" maxOccurs="1" name="CreationTime" type="s:dateTime" /> 
-          <s:element minOccurs="1" maxOccurs="1" name="ModifiedTime" type="s:dateTime" /> 
-        </s:sequence> 
-      </s:complexType> 
-      <s:simpleType name="Status"> 
-        <s:restriction base="s:string"> 
-          <s:enumeration value="Active" /> 
-          <s:enumeration value="Archived" /> 
-          <s:enumeration value="Cancelled" /> 
-          <s:enumeration value="Inactive" /> 
-          <s:enumeration value="Suspended" /> 
-          <s:enumeration value="Tentative" /> 
-          <s:enumeration value="Undefined" /> 
-        </s:restriction> 
-      </s:simpleType> 
-      <s:simpleType name="PostalCodeType"> 
-        <s:restriction base="s:string"> 
-          <s:enumeration value="APO" /> 
-          <s:enumeration value="Foreign" /> 
-          <s:enumeration value="US" /> 
-          <s:enumeration value="Undefined" /> 
-        </s:restriction> 
-      </s:simpleType> 
-      <s:complexType name="ArrayOfString"> 
-        <s:sequence> 
-          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" /> 
-        </s:sequence> 
-      </s:complexType> 
-      <s:complexType name="ArrayOfGroup"> 
-        <s:sequence> 
-          <s:element minOccurs="0" maxOccurs="unbounded" name="Group" nillable="true" type="tns:Group" /> 
-        </s:sequence> 
-      </s:complexType> 
-      <s:complexType name="Group"> 
-        <s:sequence> 
-          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" /> 
-        </s:sequence> 
-      </s:complexType> 
-      <s:complexType name="ArrayOfCustomUserAttribute"> 
-        <s:sequence> 
-          <s:element minOccurs="0" maxOccurs="unbounded" name="CustomUserAttribute" nillable="true" type="tns:CustomUserAttribute" /> 
-        </s:sequence> 
-      </s:complexType> 
-      <s:complexType name="CustomUserAttribute"> 
-        <s:sequence> 
-          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" /> 
-          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" /> 
-        </s:sequence> 
-      </s:complexType> 
-      <s:element name="UserExistsByUniqueId"> 
-        <s:complexType> 
-          <s:sequence> 
-            <s:element minOccurs="0" maxOccurs="1" name="uniqueId" type="s:string" /> 
-          </s:sequence> 
-        </s:complexType> 
-      </s:element> 
-      <s:element name="UserExistsByUniqueIdResponse"> 
-        <s:complexType> 
-          <s:sequence> 
-            <s:element minOccurs="1" maxOccurs="1" name="UserExistsByUniqueIdResult" type="s:boolean" /> 
-          </s:sequence> 
-        </s:complexType> 
-      </s:element> 
-      <s:element name="LoadUserByUniqueId"> 
-        <s:complexType> 
-          <s:sequence> 
-            <s:element minOccurs="0" maxOccurs="1" name="uniqueId" type="s:string" /> 
-          </s:sequence> 
-        </s:complexType> 
-      </s:element> 
-      <s:element name="LoadUserByUniqueIdResponse"> 
-        <s:complexType> 
-          <s:sequence> 
-            <s:element minOccurs="0" maxOccurs="1" name="LoadUserByUniqueIdResult" type="tns:User" /> 
-          </s:sequence> 
-        </s:complexType> 
-      </s:element> 
-      <s:element name="CreateUser"> 
-        <s:complexType> 
-          <s:sequence> 
-            <s:element minOccurs="0" maxOccurs="1" name="user" type="tns:User" /> 
-          </s:sequence> 
-        </s:complexType> 
-      </s:element> 
-      <s:element name="CreateUserResponse"> 
-        <s:complexType> 
-          <s:sequence> 
-            <s:element minOccurs="0" maxOccurs="1" name="CreateUserResult" type="tns:UserResult" /> 
-          </s:sequence> 
-        </s:complexType> 
-      </s:element> 
-      <s:complexType name="UserResult"> 
-        <s:complexContent mixed="false"> 
-          <s:extension base="tns:Result"> 
-            <s:sequence> 
-              <s:element minOccurs="0" maxOccurs="1" name="DefaultPassword" type="s:string" /> 
-            </s:sequence> 
-          </s:extension> 
-        </s:complexContent> 
-      </s:complexType> 
-      <s:complexType name="Result"> 
-        <s:sequence> 
-          <s:element minOccurs="0" maxOccurs="1" name="Errors" type="tns:ArrayOfString" /> 
-          <s:element minOccurs="0" maxOccurs="1" name="Warnings" type="tns:ArrayOfString" /> 
-        </s:sequence> 
-      </s:complexType> 
-      <s:element name="UpdateUser"> 
-        <s:complexType> 
-          <s:sequence> 
-            <s:element minOccurs="0" maxOccurs="1" name="user" type="tns:User" /> 
-          </s:sequence> 
-        </s:complexType> 
-      </s:element> 
-      <s:element name="UpdateUserResponse"> 
-        <s:complexType> 
-          <s:sequence> 
-            <s:element minOccurs="0" maxOccurs="1" name="UpdateUserResult" type="tns:Result" /> 
-          </s:sequence> 
-        </s:complexType> 
-      </s:element> 
-      <s:element name="LoadUser"> 
-        <s:complexType> 
-          <s:sequence> 
-            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" /> 
-          </s:sequence> 
-        </s:complexType> 
-      </s:element> 
-      <s:element name="LoadUserResponse"> 
-        <s:complexType> 
-          <s:sequence> 
-            <s:element minOccurs="0" maxOccurs="1" name="LoadUserResult" type="tns:User" /> 
-          </s:sequence> 
-        </s:complexType> 
-      </s:element> 
-      <s:element name="GenerateUserObject"> 
-        <s:complexType /> 
-      </s:element> 
-      <s:element name="GenerateUserObjectResponse"> 
-        <s:complexType> 
-          <s:sequence> 
-            <s:element minOccurs="0" maxOccurs="1" name="GenerateUserObjectResult" type="tns:User" /> 
-          </s:sequence> 
-        </s:complexType> 
-      </s:element> 
-      <s:element name="UserExists"> 
-        <s:complexType> 
-          <s:sequence> 
-            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" /> 
-          </s:sequence> 
-        </s:complexType> 
-      </s:element> 
-      <s:element name="UserExistsResponse"> 
-        <s:complexType> 
-          <s:sequence> 
-            <s:element minOccurs="1" maxOccurs="1" name="UserExistsResult" type="s:boolean" /> 
-          </s:sequence> 
-        </s:complexType> 
-      </s:element> 
-    </s:schema> 
-  </wsdl:types> 
-  <wsdl:message name="UserExistsByExternalIdSoapIn"> 
-    <wsdl:part name="parameters" element="tns:UserExistsByExternalId" /> 
-  </wsdl:message> 
-  <wsdl:message name="UserExistsByExternalIdSoapOut"> 
-    <wsdl:part name="parameters" element="tns:UserExistsByExternalIdResponse" /> 
-  </wsdl:message> 
-  <wsdl:message name="LoadUserByExternalIdSoapIn"> 
-    <wsdl:part name="parameters" element="tns:LoadUserByExternalId" /> 
-  </wsdl:message> 
-  <wsdl:message name="LoadUserByExternalIdSoapOut"> 
-    <wsdl:part name="parameters" element="tns:LoadUserByExternalIdResponse" /> 
-  </wsdl:message> 
-  <wsdl:message name="UserExistsByUniqueIdSoapIn"> 
-    <wsdl:part name="parameters" element="tns:UserExistsByUniqueId" /> 
-  </wsdl:message> 
-  <wsdl:message name="UserExistsByUniqueIdSoapOut"> 
-    <wsdl:part name="parameters" element="tns:UserExistsByUniqueIdResponse" /> 
-  </wsdl:message> 
-  <wsdl:message name="LoadUserByUniqueIdSoapIn"> 
-    <wsdl:part name="parameters" element="tns:LoadUserByUniqueId" /> 
-  </wsdl:message> 
-  <wsdl:message name="LoadUserByUniqueIdSoapOut"> 
-    <wsdl:part name="parameters" element="tns:LoadUserByUniqueIdResponse" /> 
-  </wsdl:message> 
-  <wsdl:message name="CreateUserSoapIn"> 
-    <wsdl:part name="parameters" element="tns:CreateUser" /> 
-  </wsdl:message> 
-  <wsdl:message name="CreateUserSoapOut"> 
-    <wsdl:part name="parameters" element="tns:CreateUserResponse" /> 
-  </wsdl:message> 
-  <wsdl:message name="UpdateUserSoapIn"> 
-    <wsdl:part name="parameters" element="tns:UpdateUser" /> 
-  </wsdl:message> 
-  <wsdl:message name="UpdateUserSoapOut"> 
-    <wsdl:part name="parameters" element="tns:UpdateUserResponse" /> 
-  </wsdl:message> 
-  <wsdl:message name="LoadUserSoapIn"> 
-    <wsdl:part name="parameters" element="tns:LoadUser" /> 
-  </wsdl:message> 
-  <wsdl:message name="LoadUserSoapOut"> 
-    <wsdl:part name="parameters" element="tns:LoadUserResponse" /> 
-  </wsdl:message> 
-  <wsdl:message name="GenerateUserObjectSoapIn"> 
-    <wsdl:part name="parameters" element="tns:GenerateUserObject" /> 
-  </wsdl:message> 
-  <wsdl:message name="GenerateUserObjectSoapOut"> 
-    <wsdl:part name="parameters" element="tns:GenerateUserObjectResponse" /> 
-  </wsdl:message> 
-  <wsdl:message name="UserExistsSoapIn"> 
-    <wsdl:part name="parameters" element="tns:UserExists" /> 
-  </wsdl:message> 
-  <wsdl:message name="UserExistsSoapOut"> 
-    <wsdl:part name="parameters" element="tns:UserExistsResponse" /> 
-  </wsdl:message> 
-  <wsdl:portType name="WebServicesSoap"> 
-    <wsdl:operation name="UserExistsByExternalId"> 
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Determine if a user exists. Given a GUID that identifies the user; Returns true if the user exists or false if it does not.</wsdl:documentation> 
-      <wsdl:input message="tns:UserExistsByExternalIdSoapIn" /> 
-      <wsdl:output message="tns:UserExistsByExternalIdSoapOut" /> 
-    </wsdl:operation> 
-    <wsdl:operation name="LoadUserByExternalId"> 
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Loads a user by it's ExternalId.</wsdl:documentation> 
-      <wsdl:input message="tns:LoadUserByExternalIdSoapIn" /> 
-      <wsdl:output message="tns:LoadUserByExternalIdSoapOut" /> 
-    </wsdl:operation> 
-    <wsdl:operation name="UserExistsByUniqueId"> 
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Determine if a user exists. Given a unique id that identifies the user; Returns true if the user exists or false if it does not.</wsdl:documentation> 
-      <wsdl:input message="tns:UserExistsByUniqueIdSoapIn" /> 
-      <wsdl:output message="tns:UserExistsByUniqueIdSoapOut" /> 
-    </wsdl:operation> 
-    <wsdl:operation name="LoadUserByUniqueId"> 
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Loads a user by its Unique Id.</wsdl:documentation> 
-      <wsdl:input message="tns:LoadUserByUniqueIdSoapIn" /> 
-      <wsdl:output message="tns:LoadUserByUniqueIdSoapOut" /> 
-    </wsdl:operation> 
-    <wsdl:operation name="CreateUser"> 
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Create a new user.</wsdl:documentation> 
-      <wsdl:input message="tns:CreateUserSoapIn" /> 
-      <wsdl:output message="tns:CreateUserSoapOut" /> 
-    </wsdl:operation> 
-    <wsdl:operation name="UpdateUser"> 
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update an existing user.</wsdl:documentation> 
-      <wsdl:input message="tns:UpdateUserSoapIn" /> 
-      <wsdl:output message="tns:UpdateUserSoapOut" /> 
-    </wsdl:operation> 
-    <wsdl:operation name="LoadUser"> 
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Load the user with the given username.</wsdl:documentation> 
-      <wsdl:input message="tns:LoadUserSoapIn" /> 
-      <wsdl:output message="tns:LoadUserSoapOut" /> 
-    </wsdl:operation> 
-    <wsdl:operation name="GenerateUserObject"> 
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return an unitialized User object.</wsdl:documentation> 
-      <wsdl:input message="tns:GenerateUserObjectSoapIn" /> 
-      <wsdl:output message="tns:GenerateUserObjectSoapOut" /> 
-    </wsdl:operation> 
-    <wsdl:operation name="UserExists"> 
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Determine if a user with the given username exists.</wsdl:documentation> 
-      <wsdl:input message="tns:UserExistsSoapIn" /> 
-      <wsdl:output message="tns:UserExistsSoapOut" /> 
-    </wsdl:operation> 
-  </wsdl:portType> 
-  <wsdl:binding name="WebServicesSoap" type="tns:WebServicesSoap"> 
-    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" /> 
-    <wsdl:operation name="UserExistsByExternalId"> 
-      <soap:operation soapAction="http://geolearning.com/geonext/webservices/UserExistsByExternalId" style="document" /> 
-      <wsdl:input> 
-        <soap:body use="literal" /> 
-      </wsdl:input> 
-      <wsdl:output> 
-        <soap:body use="literal" /> 
-      </wsdl:output> 
-    </wsdl:operation> 
-    <wsdl:operation name="LoadUserByExternalId"> 
-      <soap:operation soapAction="http://geolearning.com/geonext/webservices/LoadUserByExternalId" style="document" /> 
-      <wsdl:input> 
-        <soap:body use="literal" /> 
-      </wsdl:input> 
-      <wsdl:output> 
-        <soap:body use="literal" /> 
-      </wsdl:output> 
-    </wsdl:operation> 
-    <wsdl:operation name="UserExistsByUniqueId"> 
-      <soap:operation soapAction="http://geolearning.com/geonext/webservices/UserExistsByUniqueId" style="document" /> 
-      <wsdl:input> 
-        <soap:body use="literal" /> 
-      </wsdl:input> 
-      <wsdl:output> 
-        <soap:body use="literal" /> 
-      </wsdl:output> 
-    </wsdl:operation> 
-    <wsdl:operation name="LoadUserByUniqueId"> 
-      <soap:operation soapAction="http://geolearning.com/geonext/webservices/LoadUserByUniqueId" style="document" /> 
-      <wsdl:input> 
-        <soap:body use="literal" /> 
-      </wsdl:input> 
-      <wsdl:output> 
-        <soap:body use="literal" /> 
-      </wsdl:output> 
-    </wsdl:operation> 
-    <wsdl:operation name="CreateUser"> 
-      <soap:operation soapAction="http://geolearning.com/geonext/webservices/CreateUser" style="document" /> 
-      <wsdl:input> 
-        <soap:body use="literal" /> 
-      </wsdl:input> 
-      <wsdl:output> 
-        <soap:body use="literal" /> 
-      </wsdl:output> 
-    </wsdl:operation> 
-    <wsdl:operation name="UpdateUser"> 
-      <soap:operation soapAction="http://geolearning.com/geonext/webservices/UpdateUser" style="document" /> 
-      <wsdl:input> 
-        <soap:body use="literal" /> 
-      </wsdl:input> 
-      <wsdl:output> 
-        <soap:body use="literal" /> 
-      </wsdl:output> 
-    </wsdl:operation> 
-    <wsdl:operation name="LoadUser"> 
-      <soap:operation soapAction="http://geolearning.com/geonext/webservices/LoadUser" style="document" /> 
-      <wsdl:input> 
-        <soap:body use="literal" /> 
-      </wsdl:input> 
-      <wsdl:output> 
-        <soap:body use="literal" /> 
-      </wsdl:output> 
-    </wsdl:operation> 
-    <wsdl:operation name="GenerateUserObject"> 
-      <soap:operation soapAction="http://geolearning.com/geonext/webservices/GenerateUserObject" style="document" /> 
-      <wsdl:input> 
-        <soap:body use="literal" /> 
-      </wsdl:input> 
-      <wsdl:output> 
-        <soap:body use="literal" /> 
-      </wsdl:output> 
-    </wsdl:operation> 
-    <wsdl:operation name="UserExists"> 
-      <soap:operation soapAction="http://geolearning.com/geonext/webservices/UserExists" style="document" /> 
-      <wsdl:input> 
-        <soap:body use="literal" /> 
-      </wsdl:input> 
-      <wsdl:output> 
-        <soap:body use="literal" /> 
-      </wsdl:output> 
-    </wsdl:operation> 
-  </wsdl:binding> 
-  <wsdl:binding name="WebServicesSoap12" type="tns:WebServicesSoap"> 
-    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" /> 
-    <wsdl:operation name="UserExistsByExternalId"> 
-      <soap12:operation soapAction="http://geolearning.com/geonext/webservices/UserExistsByExternalId" style="document" /> 
-      <wsdl:input> 
-        <soap12:body use="literal" /> 
-      </wsdl:input> 
-      <wsdl:output> 
-        <soap12:body use="literal" /> 
-      </wsdl:output> 
-    </wsdl:operation> 
-    <wsdl:operation name="LoadUserByExternalId"> 
-      <soap12:operation soapAction="http://geolearning.com/geonext/webservices/LoadUserByExternalId" style="document" /> 
-      <wsdl:input> 
-        <soap12:body use="literal" /> 
-      </wsdl:input> 
-      <wsdl:output> 
-        <soap12:body use="literal" /> 
-      </wsdl:output> 
-    </wsdl:operation> 
-    <wsdl:operation name="UserExistsByUniqueId"> 
-      <soap12:operation soapAction="http://geolearning.com/geonext/webservices/UserExistsByUniqueId" style="document" /> 
-      <wsdl:input> 
-        <soap12:body use="literal" /> 
-      </wsdl:input> 
-      <wsdl:output> 
-        <soap12:body use="literal" /> 
-      </wsdl:output> 
-    </wsdl:operation> 
-    <wsdl:operation name="LoadUserByUniqueId"> 
-      <soap12:operation soapAction="http://geolearning.com/geonext/webservices/LoadUserByUniqueId" style="document" /> 
-      <wsdl:input> 
-        <soap12:body use="literal" /> 
-      </wsdl:input> 
-      <wsdl:output> 
-        <soap12:body use="literal" /> 
-      </wsdl:output> 
-    </wsdl:operation> 
-    <wsdl:operation name="CreateUser"> 
-      <soap12:operation soapAction="http://geolearning.com/geonext/webservices/CreateUser" style="document" /> 
-      <wsdl:input> 
-        <soap12:body use="literal" /> 
-      </wsdl:input> 
-      <wsdl:output> 
-        <soap12:body use="literal" /> 
-      </wsdl:output> 
-    </wsdl:operation> 
-    <wsdl:operation name="UpdateUser"> 
-      <soap12:operation soapAction="http://geolearning.com/geonext/webservices/UpdateUser" style="document" /> 
-      <wsdl:input> 
-        <soap12:body use="literal" /> 
-      </wsdl:input> 
-      <wsdl:output> 
-        <soap12:body use="literal" /> 
-      </wsdl:output> 
-    </wsdl:operation> 
-    <wsdl:operation name="LoadUser"> 
-      <soap12:operation soapAction="http://geolearning.com/geonext/webservices/LoadUser" style="document" /> 
-      <wsdl:input> 
-        <soap12:body use="literal" /> 
-      </wsdl:input> 
-      <wsdl:output> 
-        <soap12:body use="literal" /> 
-      </wsdl:output> 
-    </wsdl:operation> 
-    <wsdl:operation name="GenerateUserObject"> 
-      <soap12:operation soapAction="http://geolearning.com/geonext/webservices/GenerateUserObject" style="document" /> 
-      <wsdl:input> 
-        <soap12:body use="literal" /> 
-      </wsdl:input> 
-      <wsdl:output> 
-        <soap12:body use="literal" /> 
-      </wsdl:output> 
-    </wsdl:operation> 
-    <wsdl:operation name="UserExists"> 
-      <soap12:operation soapAction="http://geolearning.com/geonext/webservices/UserExists" style="document" /> 
-      <wsdl:input> 
-        <soap12:body use="literal" /> 
-      </wsdl:input> 
-      <wsdl:output> 
-        <soap12:body use="literal" /> 
-      </wsdl:output> 
-    </wsdl:operation> 
-  </wsdl:binding> 
-  <wsdl:service name="WebServices"> 
-    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Welcome to the GeoMaestro Web Service API. The following methods are available for integrating your application with Maestro.</wsdl:documentation> 
-    <wsdl:port name="WebServicesSoap" binding="tns:WebServicesSoap"> 
-      <soap:address location="https://localhost/geonext/webservices/geonext.asmx" /> 
-    </wsdl:port> 
-    <wsdl:port name="WebServicesSoap12" binding="tns:WebServicesSoap12"> 
-      <soap12:address location="https://localhost/geonext/webservices/geonext.asmx" /> 
-    </wsdl:port> 
-  </wsdl:service> 
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://geolearning.com/geonext/webservices/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://geolearning.com/geonext/webservices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Welcome to the GeoMaestro Web Service API. The following methods are available for integrating your application with Maestro.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://geolearning.com/geonext/webservices/">
+      <s:element name="UserExistsByExternalId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="externalId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserExistsByExternalIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserExistsByExternalIdResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadUserByExternalId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="externalId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadUserByExternalIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadUserByExternalIdResult" type="tns:User" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="User">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Persistent">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MiddleInitial" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="StreetAddress" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="StreetAddress2" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="PostalCodeType" type="tns:PostalCodeType" />
+              <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Extension" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LocationName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="BirthDate" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="SocialSecurityNumber" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SupervisorUserNames" type="tns:ArrayOfString" />
+              <s:element minOccurs="0" maxOccurs="1" name="Groups" type="tns:ArrayOfGroup" />
+              <s:element minOccurs="0" maxOccurs="1" name="RoleNames" type="tns:ArrayOfString" />
+              <s:element minOccurs="0" maxOccurs="1" name="DefaultRoleName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExternalId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TimeZone" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Language" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="EHRIEmployeeID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AgencySubElementCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DoChangePasswordNextLogin" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UniqueId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CustomUserAttributes" type="tns:ArrayOfCustomUserAttribute" />
+              <s:element minOccurs="0" maxOccurs="1" name="CustomSelectUserAttributes" type="tns:ArrayOfCustomUserAttribute" />
+              <s:element minOccurs="0" maxOccurs="1" name="CatalogAccessCodeNames" type="tns:ArrayOfString" />
+              <s:element minOccurs="0" maxOccurs="1" name="DirectSupervisorName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ReceiveAutomatedEmails" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Persistent" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:Status" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreationTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifiedTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Status">
+        <s:restriction base="s:string">
+          <s:enumeration value="Active" />
+          <s:enumeration value="Archived" />
+          <s:enumeration value="Inactive" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="PostalCodeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="APO" />
+          <s:enumeration value="Foreign" />
+          <s:enumeration value="US" />
+          <s:enumeration value="Undefined" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGroup">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Group" nillable="true" type="tns:Group" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Group">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDefault" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCustomUserAttribute">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CustomUserAttribute" nillable="true" type="tns:CustomUserAttribute" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustomUserAttribute">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UserExistsByUniqueId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uniqueId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserExistsByUniqueIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserExistsByUniqueIdResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadUserByUniqueId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uniqueId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadUserByUniqueIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadUserByUniqueIdResult" type="tns:User" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="tns:User" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateUserResult" type="tns:UserResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="DefaultPassword" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Result">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Errors" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Warnings" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="tns:User" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateUserResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadUserResult" type="tns:User" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateUserObject">
+        <s:complexType />
+      </s:element>
+      <s:element name="GenerateUserObjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerateUserObjectResult" type="tns:User" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserExistsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UserExistsByExternalIdSoapIn">
+    <wsdl:part name="parameters" element="tns:UserExistsByExternalId" />
+  </wsdl:message>
+  <wsdl:message name="UserExistsByExternalIdSoapOut">
+    <wsdl:part name="parameters" element="tns:UserExistsByExternalIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadUserByExternalIdSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadUserByExternalId" />
+  </wsdl:message>
+  <wsdl:message name="LoadUserByExternalIdSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadUserByExternalIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserExistsByUniqueIdSoapIn">
+    <wsdl:part name="parameters" element="tns:UserExistsByUniqueId" />
+  </wsdl:message>
+  <wsdl:message name="UserExistsByUniqueIdSoapOut">
+    <wsdl:part name="parameters" element="tns:UserExistsByUniqueIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadUserByUniqueIdSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadUserByUniqueId" />
+  </wsdl:message>
+  <wsdl:message name="LoadUserByUniqueIdSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadUserByUniqueIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateUserSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
+  </wsdl:message>
+  <wsdl:message name="CreateUserSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadUserSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadUser" />
+  </wsdl:message>
+  <wsdl:message name="LoadUserSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerateUserObjectSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateUserObject" />
+  </wsdl:message>
+  <wsdl:message name="GenerateUserObjectSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateUserObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:UserExists" />
+  </wsdl:message>
+  <wsdl:message name="UserExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:UserExistsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServicesSoap">
+    <wsdl:operation name="UserExistsByExternalId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Determine if a user exists. Given a GUID that identifies the user; Returns true if the user exists or false if it does not.</wsdl:documentation>
+      <wsdl:input message="tns:UserExistsByExternalIdSoapIn" />
+      <wsdl:output message="tns:UserExistsByExternalIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserByExternalId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Loads a user by it's ExternalId.</wsdl:documentation>
+      <wsdl:input message="tns:LoadUserByExternalIdSoapIn" />
+      <wsdl:output message="tns:LoadUserByExternalIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserExistsByUniqueId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Determine if a user exists. Given a unique id that identifies the user; Returns true if the user exists or false if it does not.</wsdl:documentation>
+      <wsdl:input message="tns:UserExistsByUniqueIdSoapIn" />
+      <wsdl:output message="tns:UserExistsByUniqueIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserByUniqueId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Loads a user by its Unique Id.</wsdl:documentation>
+      <wsdl:input message="tns:LoadUserByUniqueIdSoapIn" />
+      <wsdl:output message="tns:LoadUserByUniqueIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Create a new user.</wsdl:documentation>
+      <wsdl:input message="tns:CreateUserSoapIn" />
+      <wsdl:output message="tns:CreateUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update an existing user.</wsdl:documentation>
+      <wsdl:input message="tns:UpdateUserSoapIn" />
+      <wsdl:output message="tns:UpdateUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Load the user with the given username.</wsdl:documentation>
+      <wsdl:input message="tns:LoadUserSoapIn" />
+      <wsdl:output message="tns:LoadUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateUserObject">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return an unitialized User object.</wsdl:documentation>
+      <wsdl:input message="tns:GenerateUserObjectSoapIn" />
+      <wsdl:output message="tns:GenerateUserObjectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserExists">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Determine if a user with the given username exists.</wsdl:documentation>
+      <wsdl:input message="tns:UserExistsSoapIn" />
+      <wsdl:output message="tns:UserExistsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServicesSoap" type="tns:WebServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UserExistsByExternalId">
+      <soap:operation soapAction="http://geolearning.com/geonext/webservices/UserExistsByExternalId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserByExternalId">
+      <soap:operation soapAction="http://geolearning.com/geonext/webservices/LoadUserByExternalId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserExistsByUniqueId">
+      <soap:operation soapAction="http://geolearning.com/geonext/webservices/UserExistsByUniqueId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserByUniqueId">
+      <soap:operation soapAction="http://geolearning.com/geonext/webservices/LoadUserByUniqueId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <soap:operation soapAction="http://geolearning.com/geonext/webservices/CreateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://geolearning.com/geonext/webservices/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUser">
+      <soap:operation soapAction="http://geolearning.com/geonext/webservices/LoadUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateUserObject">
+      <soap:operation soapAction="http://geolearning.com/geonext/webservices/GenerateUserObject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserExists">
+      <soap:operation soapAction="http://geolearning.com/geonext/webservices/UserExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServicesSoap12" type="tns:WebServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UserExistsByExternalId">
+      <soap12:operation soapAction="http://geolearning.com/geonext/webservices/UserExistsByExternalId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserByExternalId">
+      <soap12:operation soapAction="http://geolearning.com/geonext/webservices/LoadUserByExternalId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserExistsByUniqueId">
+      <soap12:operation soapAction="http://geolearning.com/geonext/webservices/UserExistsByUniqueId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserByUniqueId">
+      <soap12:operation soapAction="http://geolearning.com/geonext/webservices/LoadUserByUniqueId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <soap12:operation soapAction="http://geolearning.com/geonext/webservices/CreateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap12:operation soapAction="http://geolearning.com/geonext/webservices/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUser">
+      <soap12:operation soapAction="http://geolearning.com/geonext/webservices/LoadUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateUserObject">
+      <soap12:operation soapAction="http://geolearning.com/geonext/webservices/GenerateUserObject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserExists">
+      <soap12:operation soapAction="http://geolearning.com/geonext/webservices/UserExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServices">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Welcome to the GeoMaestro Web Service API. The following methods are available for integrating your application with Maestro.</wsdl:documentation>
+    <wsdl:port name="WebServicesSoap" binding="tns:WebServicesSoap">
+      <soap:address location="https://localhost/Geonext/webservices/geonext.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServicesSoap12" binding="tns:WebServicesSoap12">
+      <soap12:address location="https://localhost/Geonext/webservices/geonext.asmx" />
+    </wsdl:port>
+  </wsdl:service>
 </wsdl:definitions>

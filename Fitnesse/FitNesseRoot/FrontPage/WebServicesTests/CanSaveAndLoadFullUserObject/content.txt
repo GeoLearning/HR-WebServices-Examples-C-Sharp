@@ -5,31 +5,34 @@
 
 !2 This test expects that certain Groups, Cuas, and Cacs have been created in the LMS. If they have not then this will fail.
 
-|User Name       |(RANDOM)                                      |
-|Password        |Password1!                                    |
-|First Name      |Martin                                        |
-|Last Name       |Van Bruin                                     |
-|Email           |a@b.com                                       |
-|Street Address  |801 Grand                                     |
-|Street Address 2|Suite 4201                                    |
-|City            |Des Moines                                    |
-|State           |IA                                            |
-|Country         |United States                                 |
-|Zip Code Type   |US                                            |
-|Zip Code        |90210                                         |
-|Telephone       |515.222.6289                                  |
-|Extension       |325                                           |
-|Location Name   |A little pad in Hawaii                        |
-|Role            |Learner,Administrator                         |
-|Default Role    |Learner                                       |
-|Supervisor      |Geo_Testing,ryber@geolearning.com             |
-|CAC             |WS-Cac1,WS-Cac2                               |
-|Csua            |WS-Test-Select:Large                          |
-|Cua             |WS-Test-Text:Oranges                          |
-|Group           |WS-Group-Parent,WS-Group-Parent/WS-Group-Child|
-|Language        |en-US                                         |
-|Time Zone       |Asia/Sakhalin                                 |
-|Check           |Create                  |True                 |
+|User Name        |(RANDOM)                      |
+|Password         |Password1!                    |
+|First Name       |Martin                        |
+|Last Name        |Van Bruin                     |
+|Email            |a@b.com                       |
+|Street Address   |801 Grand                     |
+|Street Address 2 |Suite 4201                    |
+|City             |Des Moines                    |
+|State            |IA                            |
+|Country          |United States                 |
+|Zip Code Type    |US                            |
+|Zip Code         |90210                         |
+|Telephone        |515.222.6289                  |
+|Extension        |325                           |
+|Location Name    |A little pad in Hawaii        |
+|Role             |Learner,Administrator         |
+|Default Role     |Learner                       |
+|Supervisor       |ryber@geolearning.com         |
+|Direct Supervisor|Geo_Testing                   |
+|CAC              |WS-Cac1,WS-Cac2               |
+|Csua             |WS-Test-Select:Large          |
+|Cua              |WS-Test-Text:Oranges          |
+|Group            |WS-Group-Parent/WS-Group-Child|
+|Group By Code    |WS-Group-Parent-Code          |
+|Default Group    |WS-Group-Parent-Code          |
+|Language         |en-US                         |
+|Time Zone        |Asia/Sakhalin                 |
+|Check            |Create          |True         |
 
 |Results Contain Warnings|
 |Message                 |
@@ -37,31 +40,32 @@
 |Results Contain Errors|
 |Message               |
 
-|Inspect Last User Created                      |
-|Field           |Value                         |
-|First Name      |Martin                        |
-|Last Name       |Van Bruin                     |
-|Email           |a@b.com                       |
-|Street Address  |801 Grand                     |
-|Street Address 2|Suite 4201                    |
-|City            |Des Moines                    |
-|State           |IOWA                          |
-|Country         |United States                 |
-|Zip Code Type   |US                            |
-|Zip Code        |90210                         |
-|Telephone       |515.222.6289                  |
-|Extension       |325                           |
-|Location Name   |A little pad in Hawaii        |
-|Role            |Learner                       |
-|Role            |Administrator                 |
-|Default Role    |Learner                       |
-|Supervisor      |Geo_Testing                   |
-|Supervisor      |ryber@geolearning.com         |
-|CAC             |WS-Cac1                       |
-|CAC             |WS-Cac2                       |
-|Csua            |WS-Test-Select:Large          |
-|Cua             |WS-Test-Text:Oranges          |
-|Group           |WS-Group-Parent               |
-|Group           |WS-Group-Parent/WS-Group-Child|
-|Language        |en-US                         |
-|Time Zone       |Asia/Sakhalin                 |
+|Inspect Last User Created                       |
+|Field            |Value                         |
+|First Name       |Martin                        |
+|Last Name        |Van Bruin                     |
+|Email            |a@b.com                       |
+|Street Address   |801 Grand                     |
+|Street Address 2 |Suite 4201                    |
+|City             |Des Moines                    |
+|State            |IOWA                          |
+|Country          |United States                 |
+|Zip Code Type    |US                            |
+|Zip Code         |90210                         |
+|Telephone        |515.222.6289                  |
+|Extension        |325                           |
+|Location Name    |A little pad in Hawaii        |
+|Role             |Learner                       |
+|Role             |Administrator                 |
+|Default Role     |Learner                       |
+|Supervisor       |Geo_Testing                   |
+|Supervisor       |ryber@geolearning.com         |
+|Direct Supervisor|Geo_Testing                   |
+|CAC              |WS-Cac1                       |
+|CAC              |WS-Cac2                       |
+|Csua             |WS-Test-Select:Large          |
+|Cua              |WS-Test-Text:Oranges          |
+|Group            |WS-Group-Parent               |
+|Group            |WS-Group-Parent/WS-Group-Child|
+|Language         |en-US                         |
+|Time Zone        |Asia/Sakhalin                 |
