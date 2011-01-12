@@ -1,87 +1,75 @@
 /*
 ##########################################################
-## GeoNext Project
-##
 ## CONFIDENTIAL & PROPRIETARY
-##
 ## Copyright (C) 2004 - 2007 by Geolearning, Inc.
-## All Rights Reserved.
-##
-## Written by Jeff Bartolotta
-## 
 ##########################################################
 */
 using System;
 
 namespace GeolearningSharpExample {
     public class GeolearningCSharpExample {
-        private readonly TestUtilityServices TESTUTILITY;
-        private readonly WebServices SERVICE;
+        private readonly TestUtilityServices testUtility;
+        private readonly WebServices service;
 
         public GeolearningCSharpExample() {
-            TESTUTILITY = new TestUtilityServices();
-            SERVICE = TESTUTILITY.GetWSConnection();
+            testUtility = new TestUtilityServices();
+            service = testUtility.GetWsConnection();
         }
         
-
-        protected String createNewUser() {
-            Console.WriteLine("***createNewUser begin***");
+        protected String CreateNewUser() {
+            Console.WriteLine("***CreateNewUser begin***");
 
             // Create a new user object
-            User user = TESTUTILITY.GetNewFullyLoadedUser();
+            var user = testUtility.GetNewFullyLoadedUser();
   
             Console.WriteLine("***creating new user: " + user.UserName + " ***");
             
             // finally, we can save the user. note that save and update user return a "result" object.
             // we can use that result to see messages and potential errors with our process.
-            UserResult userResult = SERVICE.CreateUser(user);
+            var userResult = service.CreateUser(user);
 
-            TESTUTILITY.PrintErrorsAndWarnings(userResult);
+            testUtility.PrintErrorsAndWarnings(userResult);
 
-            Console.WriteLine("***createNewUser end***");
+            Console.WriteLine("***CreateNewUser end***");
             
-
             return user.UserName;
         }
 
 
+        protected void UpdateUser(String userName) {
+            Console.WriteLine("***UpdateUser begin***");
 
-
-        protected void updateUser(String userName) {
-            Console.WriteLine("***updateUser begin***");
-
-
-            User user = SERVICE.LoadUser(userName);
+            var user = service.LoadUser(userName);
             user.City = "New " + user.City;
 
-            string[] rolesTemp = new string[2];
+            var rolesTemp = new string[2];
             rolesTemp[0]=user.RoleNames.GetValue(0).ToString();
             rolesTemp[1]="Instructor";
             user.RoleNames = rolesTemp;
             
-            Result result = SERVICE.UpdateUser(user);
+            var result = service.UpdateUser(user);
 
-            TESTUTILITY.PrintErrorsAndWarnings(result);
+            testUtility.PrintErrorsAndWarnings(result);
             
-            Console.WriteLine("***updateUser end***");
+            Console.WriteLine("***UpdateUser end***");
         }
 
-        protected void loadUser(String userName) {
-            Console.WriteLine("***loadUser begin***");
+        protected void LoadUser(String userName) {
+            Console.WriteLine("***LoadUser begin***");
 
-            User user = SERVICE.LoadUser(userName);
+            var user = service.LoadUser(userName);
 
-            TESTUTILITY.PrintUserObject(user);
+            testUtility.PrintUserObject(user);
 
-            Console.WriteLine("***loadUser end***");
+            Console.WriteLine("***LoadUser end***");
         }
 
         public static void Main(string[] args) {
             try {
-                GeolearningCSharpExample gcse = new GeolearningCSharpExample();
-                String userName = gcse.createNewUser();
-                gcse.updateUser(userName);
-                gcse.loadUser(userName);
+                var gcse = new GeolearningCSharpExample();
+                var userName = gcse.CreateNewUser();
+                gcse.UpdateUser(userName);
+                gcse.LoadUser(userName);
             } catch (Exception e) {
                 Console.WriteLine("Caught Exception: " + e.Message + " " + e.GetType().FullName);
             }

@@ -13,7 +13,6 @@
 */
 using System;
 using System.Collections.Generic;
-using System.Net;
 using System.Xml;
 
 namespace GeolearningSharpExample
@@ -22,64 +21,44 @@ namespace GeolearningSharpExample
     public class TestUtilityServices
     {
         private readonly WebServices geoWS;
-        public string username;
-        public string password;
-        public string host;
-        public static XmlDocument config;
 
         public TestUtilityServices()
         {
-            config = new XmlDocument();
-            config.Load("Settings.xml");
-  
-            geoWS = new WebServices();
-            host = getSetting("/settings/connection/url"); 
-            username = getSetting("/settings/connection/username");
-            password = getSetting("/settings/connection/password");
+            const string username = "geoadmin";
+            const string password = "";
             
-            geoWS.Url = host;
-            
+            geoWS = new WebServices
+                        {
+                            Url = "http://localhost/geonext/webservices/geonext.asmx",
+                            Credentials = new System.Net.NetworkCredential(username, password)
+                        };
 
-            geoWS.Credentials = new System.Net.NetworkCredential(username, password);
 
             Console.WriteLine("*************************");
             Console.WriteLine("Initilize Successfull!");
-            Console.WriteLine("Host:" + host);
+            Console.WriteLine("Host:" + geoWS.Url);
             Console.WriteLine("Username:" + username);
             Console.WriteLine("Password:" + password);
             Console.WriteLine("*************************");
         }
 
-        public string getSetting(string xmlPath) {
-            try{
-            return config.SelectSingleNode(xmlPath).InnerText;
-                }catch(NullReferenceException) {
-                    throw new Exception("You refrenced a XML element in settings that did not exist. Check your path.");
-                }
-        }
 
-
-        public User GetNewRandomUser()
-        {
-            User newUser = geoWS.GenerateUserObject();
-            string newusername = GetRandomString();
+        public User GetNewFullyLoadedUser() {
+            var newUser = geoWS.GenerateUserObject();
+            string newusername = Guid.NewGuid().ToString();
             newUser.UserName = newusername;
-            newUser.Password = getSetting("/settings/user/password"); 
-            
+            newUser.Password = "Password1!";
+
             newUser.FirstName = "John";
             newUser.MiddleInitial = "Q";
             newUser.LastName = "Jinglehimershmitz";
             newUser.Email = newusername + "@geolearning.com";
 
-            string roleToAssign = getSetting("/settings/user/role");
-            newUser.RoleNames = new String[] { roleToAssign };
-            newUser.DefaultRoleName = roleToAssign;
+        
+            newUser.RoleNames = new[] { "Administrator" };
+            newUser.DefaultRoleName = "Administrator";
             newUser.UniqueId = newusername;
-            return newUser;
-        }
-
-        public User GetNewFullyLoadedUser() {
-            User newUser = GetNewRandomUser();
+      
 
             newUser.StreetAddress = "4600 Westown Pkwy";
             newUser.StreetAddress2 = "Suite 301";
@@ -96,7 +75,7 @@ namespace GeolearningSharpExample
             newUser.DoChangePasswordNextLogin = "false";
             newUser.TimeZone = "America/Cayman";
            
-            DateTime birthDate = new DateTime(1988, 02, 26);
+            var birthDate = new DateTime(1988, 02, 26);
             newUser.BirthDate = birthDate;
             newUser.SocialSecurityNumber = "555-55-5555";
 
@@ -104,49 +83,47 @@ namespace GeolearningSharpExample
             newUser.AgencySubElementCode = "AB00";
 
 
-            newUser.LocationName = getSetting("/settings/user/location");
+            newUser.LocationName = "Cocomo";
             newUser.StartDate = DateTime.Now.AddDays(-10);
 
             // supervisor names are stored in a ArrayOfString. we will use the user we are connecting with because he obviously exists.
-            newUser.SupervisorUserNames = new String[] { username };
+            newUser.SupervisorUserNames = new[] { "SupervisorsUserName" };
 
             // Groups are mostly the same but in this case we are dealing with the group object which
             // also needs to come out of the stubs. 
             // 
             // At this time all groups fall under a hierarchy. The "name" will represent
             // the full path to the group, seperated by slashes down the tree.
-            Group group = new Group();
-            group.Name = getSetting("/settings/user/group");
-            newUser.Groups = new Group[] { group };
+            var group = new Group
+                            {
+                                Name = "Group A"
+                            };
+            newUser.Groups = new[] { group };
 
             // and the custom user attributes. Remember that these would need to have already been created in the system.
-            CustomUserAttribute cua = new CustomUserAttribute();
-            cua.Name = getSetting("/settings/user/cua/name");
-            cua.Value = getSetting("/settings/user/cua/value");
-            newUser.CustomUserAttributes = new CustomUserAttribute[] { cua };
+            var cua = new CustomUserAttribute
+                          {
+                              Name = "Job Title",
+                              Value = "Developer"
+                          };
+            newUser.CustomUserAttributes = new[] { cua };
 
-            CustomUserAttribute existingCUSA = new CustomUserAttribute();
-            existingCUSA.Name = getSetting("/settings/user/cusa/name");
-            existingCUSA.Value = getSetting("/settings/user/cusa/value");
-            newUser.CustomSelectUserAttributes = new CustomUserAttribute[] { existingCUSA };
+            var existingCUSA = new CustomUserAttribute
+                                   {
+                                       Name = "Hair Color",
+                                       Value = "Pink"
+                                   };
+            newUser.CustomSelectUserAttributes = new[] { existingCUSA };
 
             // now some Catalog Access Codes.
-            newUser.CatalogAccessCodeNames = new string[] { getSetting("/settings/user/cac") };
+            newUser.CatalogAccessCodeNames = new[] { "Code A", "Code B" };
 
             return newUser;
         }
 
-        public User GetRandomUserWithCUASet() {
-            User newUser = GetNewRandomUser();
-            newUser.CustomSelectUserAttributes = GetCUASelectSet();
-            newUser.CustomUserAttributes = GetCUASet();
-            return newUser;
-        }
 
-        public string GetRandomString()
-        {
-            return Guid.NewGuid().ToString();
-        }
+
+
 
         public void PrintErrorsAndWarnings(Result result)
         {
@@ -154,34 +131,20 @@ namespace GeolearningSharpExample
             if(result.Errors.Length == 0 && result.Warnings.Length == 0) {
                 Console.WriteLine("No Errors or Warnings found");
             }else{
-                foreach (string error in result.Errors)
+                foreach (var error in result.Errors)
                 {
                     Console.WriteLine("ERROR: " + error);
                 }
-                foreach (string warning in result.Warnings)
+                foreach (var warning in result.Warnings)
                 {
                     Console.WriteLine("WARNING: " + warning);
                 }
             }
         }
 
-        public bool SearchResultsForString(Result result, string searchString)
-        {
-            String[] warningsanderrors = new string[result.Errors.Length + result.Warnings.Length];
-            result.Errors.CopyTo(warningsanderrors, 0);
-            result.Warnings.CopyTo(warningsanderrors, result.Errors.Length);
 
-            foreach (string line in warningsanderrors)
-            {
-                if (line.Equals(searchString))
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
 
-        public WebServices GetWSConnection()
+        public WebServices GetWsConnection()
         {
             return geoWS;
         }
@@ -212,98 +175,29 @@ namespace GeolearningSharpExample
             Console.WriteLine("Time Zone:" + user.TimeZone);
 
             Console.WriteLine("Default Role: " + user.DefaultRoleName);
-            foreach (string thisRole in user.RoleNames) {
+            foreach (var thisRole in user.RoleNames) {
                 Console.WriteLine("Role: "+ thisRole);
             }
 
-            foreach (string supervisor in user.SupervisorUserNames) {
+            foreach (var supervisor in user.SupervisorUserNames) {
                 Console.WriteLine("Supervisor: " + supervisor);
             }
 
-            foreach (CustomUserAttribute CUSA in user.CustomSelectUserAttributes) {
-                Console.WriteLine("CUSA: " + CUSA);
+            foreach (var cusa in user.CustomSelectUserAttributes) {
+                Console.WriteLine("CUSA: " + cusa);
             }
 
-            foreach (CustomUserAttribute CUA in user.CustomUserAttributes) {
-                Console.WriteLine("CUA: " + CUA);
+            foreach (var cua in user.CustomUserAttributes) {
+                Console.WriteLine("CUA: " + cua);
             }
 
-            foreach (Group thisGroup in user.Groups) {
+            foreach (var thisGroup in user.Groups) {
                 Console.WriteLine("Group: " + thisGroup.Name);
             }
             
-            foreach (string cac in user.CatalogAccessCodeNames) {
+            foreach (var cac in user.CatalogAccessCodeNames) {
                 Console.WriteLine("CAC: " + cac);
             }
         }
-
-        public CustomUserAttribute[] GetCUASet()
-        {
-            IList<String> CUAList = new List<String>();
-            CUAList.Add("A");
-            CUAList.Add("B");
-            CUAList.Add("C");
-            CUAList.Add("D");
-            CUAList.Add("E");
-            CUAList.Add("F");
-            CUAList.Add("G");
-            CUAList.Add("H");
-            CUAList.Add("I");
-            CUAList.Add("J");
-            CUAList.Add("K");
-            CUAList.Add("L");
-
-            CustomUserAttribute[] CUAs = new CustomUserAttribute[12];
-            int ArrayPos = 0;
-
-            foreach (String letter in CUAList) {
-     
-                CustomUserAttribute CUA = new CustomUserAttribute();
-                CUA.Name = letter;
-                CUA.Value = Guid.NewGuid().ToString();
-                CUAs.SetValue(CUA, ArrayPos);
-                ArrayPos++;
-            }
-
-            return CUAs;
-        }
-
-
-        public CustomUserAttribute[] GetCUASelectSet()
-        {
-            IList<String> CUAList = new List<String>();
-            CUAList.Add("M");
-            CUAList.Add("N");
-            CUAList.Add("O");
-            CUAList.Add("P");
-            CUAList.Add("Q");
-            CUAList.Add("R");
-            CUAList.Add("S");
-            CUAList.Add("T");
-            CUAList.Add("U");
-            CUAList.Add("V");
-            CUAList.Add("W");
-            CUAList.Add("X");
-            CUAList.Add("Y");
-            CUAList.Add("Z");
-
-            CustomUserAttribute[] CUAs = new CustomUserAttribute[14];
-            Random RandomClass = new Random();
-            int ArrayPos = 0;
-
-            foreach (String letter in CUAList)
-            {
-                CustomUserAttribute CUA = new CustomUserAttribute();
-                CUA.Name = letter;
-                int RandomNumber = RandomClass.Next(1, 9);
-                CUA.Value = RandomNumber.ToString();
-                CUAs.SetValue(CUA,ArrayPos);
-                ArrayPos++;
-            }
-
-            return CUAs;
-        }
     }
-
-
 }
