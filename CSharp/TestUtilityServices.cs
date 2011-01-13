@@ -1,23 +1,14 @@
 /*
 ##########################################################
-## GeoNext Project
-##
 ## CONFIDENTIAL & PROPRIETARY
-##
 ## Copyright (C) 2008 by Geolearning, Inc.
 ## All Rights Reserved.
-##
-## Written by Ryan Bergman
-## 
 ##########################################################
 */
 using System;
-using System.Collections.Generic;
-using System.Xml;
 
 namespace GeolearningSharpExample
 {
-
     public class TestUtilityServices
     {
         private readonly WebServices geoWS;
@@ -53,6 +44,7 @@ namespace GeolearningSharpExample
             newUser.MiddleInitial = "Q";
             newUser.LastName = "Jinglehimershmitz";
             newUser.Email = newusername + "@geolearning.com";
+            newUser.ReceiveAutomatedEmails = false;
 
         
             newUser.RoleNames = new[] { "Administrator" };
@@ -81,24 +73,34 @@ namespace GeolearningSharpExample
 
             newUser.EHRIEmployeeID = "1234";
             newUser.AgencySubElementCode = "AB00";
-
+            
 
             newUser.LocationName = "Cocomo";
             newUser.StartDate = DateTime.Now.AddDays(-10);
 
             // supervisor names are stored in a ArrayOfString. we will use the user we are connecting with because he obviously exists.
+            // If the directSupervisor name is not in the list of supervisors it will automatically be added.
             newUser.SupervisorUserNames = new[] { "SupervisorsUserName" };
+            newUser.DirectSupervisorName = "SupervisorsUserName";
 
             // Groups are mostly the same but in this case we are dealing with the group object which
             // also needs to come out of the stubs. 
             // 
-            // At this time all groups fall under a hierarchy. The "name" will represent
-            // the full path to the group, seperated by slashes down the tree.
-            var group = new Group
-                            {
-                                Name = "Group A"
-                            };
-            newUser.Groups = new[] { group };
+            // At this time all groups fall under a hierarchy. Code is the prefered way to load groups because it is always unique 
+            // The "name" can also be used and will represent the full path to the group, seperated by slashes down the tree.
+            var groupByPath = new Group
+            {
+                Code = "GroupCode"
+            }; 
+            
+            var groupByNamePath = new Group
+            {
+                Name = "Group A/Child A/Child AA",
+                IsDefault = true
+            };
+
+            
+            newUser.Groups = new[] { groupByNamePath, groupByPath };
 
             // and the custom user attributes. Remember that these would need to have already been created in the system.
             var cua = new CustomUserAttribute

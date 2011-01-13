@@ -73,7 +73,7 @@ namespace GeolearningSharpExample {
             } catch (Exception e) {
                 Console.WriteLine("Caught Exception: " + e.Message + " " + e.GetType().FullName);
             }
-            Console.ReadLine();
+          
         }
     }
 }
