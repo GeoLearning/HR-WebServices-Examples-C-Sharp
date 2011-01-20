@@ -48,7 +48,7 @@ public partial class WebServices : System.Web.Services.Protocols.SoapHttpClientP
     
     /// <remarks/>
     public WebServices() {
-        this.Url = "https://localhost/Geonext/webservices/geonext.asmx";
+        this.Url = "https://localhost/geonext/webservices/geonext.asmx";
     }
     
     /// <remarks/>
@@ -530,6 +530,8 @@ public partial class User : Persistent {
     
     private bool receiveAutomatedEmailsField;
     
+    private ProfileOwner ownerField;
+    
     /// <remarks/>
     public string FirstName {
         get {
@@ -889,6 +891,16 @@ public partial class User : Persistent {
             this.receiveAutomatedEmailsField = value;
         }
     }
+    
+    /// <remarks/>
+    public ProfileOwner Owner {
+        get {
+            return this.ownerField;
+        }
+        set {
+            this.ownerField = value;
+        }
+    }
 }
 
 /// <remarks/>
@@ -1103,6 +1115,19 @@ public enum Status {
     
     /// <remarks/>
     Inactive,
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("wsdl", "2.0.50727.1432")]
+[System.SerializableAttribute()]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://geolearning.com/geonext/webservices/")]
+public enum ProfileOwner {
+    
+    /// <remarks/>
+    LMS,
+    
+    /// <remarks/>
+    External,
 }
 
 /// <remarks/>
