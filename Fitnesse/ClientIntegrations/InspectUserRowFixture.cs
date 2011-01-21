@@ -32,6 +32,7 @@ public class InspectUserRowFixture : RowFixture
         Add("Telephone",bob.Telephone);
         Add("Extension",bob.Extension);
         Add("Location Name", bob.LocationName);
+        Add("Owner", bob.Owner.ToString());
         foreach (var role in bob.RoleNames)
         {
             Add("Role",role);

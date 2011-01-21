@@ -32,6 +32,7 @@
 |Default Group    |WS-Group-Parent-Code          |
 |Language         |en-US                         |
 |Time Zone        |Asia/Sakhalin                 |
+|Owner            |External                      |
 |Check            |Create          |True         |
 
 |Results Contain Warnings|
@@ -69,3 +70,4 @@
 |Group            |WS-Group-Parent/WS-Group-Child|
 |Language         |en-US                         |
 |Time Zone        |Asia/Sakhalin                 |
+|Owner            |External                      |

@@ -33,6 +33,7 @@ public class CreateUpdateNewUser : WebServiceTestBase
     public string Cac { get; set; }
     public string DirectSupervisor { get; set; }
     public string DefaultGroup { get; set; }
+    public string Owner { get; set; }
 
     public virtual bool Create()
     {
@@ -81,8 +82,17 @@ public class CreateUpdateNewUser : WebServiceTestBase
         emptyUser.CustomSelectUserAttributes = GetBlankOrValueCuaArray(Csua);
         emptyUser.CatalogAccessCodeNames = GetBlankOrValueArray(Cac);
         emptyUser.DirectSupervisorName = DirectSupervisor;
+        emptyUser.Owner = GetOwner();
+    }
+
+    private ProfileOwner GetOwner()
+    {
+        if(string.IsNullOrEmpty(Owner))
+        {
+            return ProfileOwner.LMS;
+        }
+        return (ProfileOwner)Enum.Parse(typeof (ProfileOwner), Owner);
         
-       
     }
 
     private PostalCodeType GetPostalCodeType()
