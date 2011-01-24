@@ -130,6 +130,7 @@
         <s:restriction base="s:string">
           <s:enumeration value="LMS" />
           <s:enumeration value="External" />
+          <s:enumeration value="SumTotal" />
         </s:restriction>
       </s:simpleType>
       <s:element name="UserExistsByUniqueId">

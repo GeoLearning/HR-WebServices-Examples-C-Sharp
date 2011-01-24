@@ -130,6 +130,7 @@
         <s:restriction base="s:string">
           <s:enumeration value="LMS" />
           <s:enumeration value="External" />
+          <s:enumeration value="SumTotal" />
         </s:restriction>
       </s:simpleType>
       <s:element name="UserExistsByUniqueId">
@@ -515,10 +516,10 @@
   <wsdl:service name="WebServices">
     <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Welcome to the GeoMaestro Web Service API. The following methods are available for integrating your application with Maestro.</wsdl:documentation>
     <wsdl:port name="WebServicesSoap" binding="tns:WebServicesSoap">
-      <soap:address location="https://localhost/geonext/webservices/geonext.asmx" />
+      <soap:address location="https://localhost/Geonext/webservices/geonext.asmx" />
     </wsdl:port>
     <wsdl:port name="WebServicesSoap12" binding="tns:WebServicesSoap12">
-      <soap12:address location="https://localhost/geonext/webservices/geonext.asmx" />
+      <soap12:address location="https://localhost/Geonext/webservices/geonext.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

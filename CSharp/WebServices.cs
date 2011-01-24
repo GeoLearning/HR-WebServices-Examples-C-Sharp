@@ -48,7 +48,7 @@ public partial class WebServices : System.Web.Services.Protocols.SoapHttpClientP
     
     /// <remarks/>
     public WebServices() {
-        this.Url = "https://localhost/geonext/webservices/geonext.asmx";
+        this.Url = "https://localhost/Geonext/webservices/geonext.asmx";
     }
     
     /// <remarks/>
@@ -1128,6 +1128,9 @@ public enum ProfileOwner {
     
     /// <remarks/>
     External,
+    
+    /// <remarks/>
+    SumTotal,
 }
 
 /// <remarks/>
