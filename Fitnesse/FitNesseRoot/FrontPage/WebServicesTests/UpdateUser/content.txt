@@ -1,0 +1,33 @@
+|Create Update New User|
+
+!include .IncludedPages.ConfigureWebServices
+
+!|Username       |testuser|
+|First Name      |Elwood|
+|Last Name       |Blues|
+|Email           |noreply@sumtotalsystems.com|
+|Role            |Learner|
+|StreetAddress   |1060 West Addison Street|
+|StreetAddress2  |            |
+|City            |Chicago|
+|State           |IL|
+|Country         |United States|
+|ZipCodeType     |US|
+|ZipCode         |60613|
+|Telephone       |            |
+|Extension       |            |
+|LocationName    |            |
+|DefaultRole     |Learner|
+|Supervisor      |            |
+|Group           |            |
+|GroupByCode     |            |
+|Cac             |            |
+|DirectSupervisor|            |
+|Check           |Update|True|
+
+
+|Results Contain Warnings|
+|Message                 |
+
+|Results Contain Errors|
+|Message               |

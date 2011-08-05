@@ -46,7 +46,7 @@ public class CreateUpdateNewUser : WebServiceTestBase
 
     public virtual bool Update()
     {
-        var repull = GeoMaestroServices.LoadUser(LastCreatedUser.UserName);
+        var repull = GeoMaestroServices.LoadUser(LastCreatedUser == null ? UserName : LastCreatedUser.UserName);
         UserName = repull.UserName;
         HydrateUser(repull);
         Result = GeoMaestroServices.UpdateUser(repull);
