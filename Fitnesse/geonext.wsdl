@@ -70,7 +70,7 @@
               <s:element minOccurs="0" maxOccurs="1" name="CustomSelectUserAttributes" type="tns:ArrayOfCustomUserAttribute" />
               <s:element minOccurs="0" maxOccurs="1" name="CatalogAccessCodeNames" type="tns:ArrayOfString" />
               <s:element minOccurs="0" maxOccurs="1" name="DirectSupervisorName" type="s:string" />
-              <s:element minOccurs="1" maxOccurs="1" name="ReceiveAutomatedEmails" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" default="true" name="ReceiveAutomatedEmails" type="s:boolean" />
               <s:element minOccurs="1" maxOccurs="1" name="Owner" type="tns:ProfileOwner" />
             </s:sequence>
           </s:extension>

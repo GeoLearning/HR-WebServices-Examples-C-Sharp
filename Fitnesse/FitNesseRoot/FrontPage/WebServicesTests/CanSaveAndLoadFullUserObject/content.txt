@@ -41,33 +41,34 @@
 |Results Contain Errors|
 |Message               |
 
-|Inspect Last User Created                       |
-|Field            |Value                         |
-|First Name       |Martin                        |
-|Last Name        |Van Bruin                     |
-|Email            |a@b.com                       |
-|Street Address   |801 Grand                     |
-|Street Address 2 |Suite 4201                    |
-|City             |Des Moines                    |
-|State            |IOWA                          |
-|Country          |United States                 |
-|Zip Code Type    |US                            |
-|Zip Code         |90210                         |
-|Telephone        |515.222.6289                  |
-|Extension        |325                           |
-|Location Name    |A little pad in Hawaii        |
-|Role             |Learner                       |
-|Role             |Administrator                 |
-|Default Role     |Learner                       |
-|Supervisor       |Geo_Testing                   |
-|Supervisor       |ryber@geolearning.com         |
-|Direct Supervisor|Geo_Testing                   |
-|CAC              |WS-Cac1                       |
-|CAC              |WS-Cac2                       |
-|Csua             |WS-Test-Select:Large          |
-|Cua              |WS-Test-Text:Oranges          |
-|Group            |WS-Group-Parent               |
-|Group            |WS-Group-Parent/WS-Group-Child|
-|Language         |en-US                         |
-|Time Zone        |Asia/Sakhalin                 |
-|Owner            |External                      |
+|Inspect Last User Created                              |
+|Field                   |Value                         |
+|First Name              |Martin                        |
+|Last Name               |Van Bruin                     |
+|Email                   |a@b.com                       |
+|Street Address          |801 Grand                     |
+|Street Address 2        |Suite 4201                    |
+|City                    |Des Moines                    |
+|State                   |IOWA                          |
+|Country                 |United States                 |
+|Zip Code Type           |US                            |
+|Zip Code                |90210                         |
+|Telephone               |515.222.6289                  |
+|Extension               |325                           |
+|Location Name           |A little pad in Hawaii        |
+|Role                    |Learner                       |
+|Role                    |Administrator                 |
+|Default Role            |Learner                       |
+|Supervisor              |Geo_Testing                   |
+|Supervisor              |ryber@geolearning.com         |
+|Direct Supervisor       |Geo_Testing                   |
+|CAC                     |WS-Cac1                       |
+|CAC                     |WS-Cac2                       |
+|Csua                    |WS-Test-Select:Large          |
+|Cua                     |WS-Test-Text:Oranges          |
+|Group                   |WS-Group-Parent               |
+|Group                   |WS-Group-Parent/WS-Group-Child|
+|Language                |en-US                         |
+|Time Zone               |Asia/Sakhalin                 |
+|Receive Automated Emails|True                          |
+|Owner                   |External                      |

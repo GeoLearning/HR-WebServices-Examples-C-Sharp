@@ -17,7 +17,6 @@ public class InspectUserRowFixture : RowFixture
     {
         Add("First Name", bob.FirstName);
         Add("Last Name", bob.LastName);
-        //Add("User Name", bob.UserName);
         Add("Email",bob.Email);
         Add("Default Role",bob.DefaultRoleName);
         Add("Language",bob.Language);
@@ -33,6 +32,7 @@ public class InspectUserRowFixture : RowFixture
         Add("Extension",bob.Extension);
         Add("Location Name", bob.LocationName);
         Add("Owner", bob.Owner.ToString());
+        Add("Receive Automated Emails", bob.ReceiveAutomatedEmails.ToString());
         foreach (var role in bob.RoleNames)
         {
             Add("Role",role);

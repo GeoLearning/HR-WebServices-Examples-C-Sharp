@@ -15,7 +15,7 @@
 |'Roles' contains no valid values. |
 |'Default Role' is null.           |
 |'User Name' must be specified.    |
-|Default Role: No Default Role Was Specified. Please provide a role that is listed as one of the user's roles|
+|Roles: There are no valid roles requested for the user.|
 
 !2 Create a good User
 |User Name   |(RANDOM)   |

@@ -34,6 +34,7 @@ public class CreateUpdateNewUser : WebServiceTestBase
     public string DirectSupervisor { get; set; }
     public string DefaultGroup { get; set; }
     public string Owner { get; set; }
+    public bool Optin { get; set; }
 
     public virtual bool Create()
     {
@@ -49,6 +50,7 @@ public class CreateUpdateNewUser : WebServiceTestBase
         var repull = GeoMaestroServices.LoadUser(LastCreatedUser == null ? UserName : LastCreatedUser.UserName);
         UserName = repull.UserName;
         HydrateUser(repull);
+        repull.ReceiveAutomatedEmails = Optin;
         Result = GeoMaestroServices.UpdateUser(repull);
         LastCreatedUser = repull;
         return Result.Errors.Length == 0;

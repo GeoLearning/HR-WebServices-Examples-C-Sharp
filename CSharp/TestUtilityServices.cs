@@ -169,12 +169,13 @@ namespace GeolearningSharpExample
             Console.WriteLine("Phone: " + user.Telephone);
             Console.WriteLine("Extention: " + user.Extension);
             Console.WriteLine("Start Date: " + user.StartDate);
-            Console.WriteLine("EHRI Employee ID:" + user.EHRIEmployeeID);
-            Console.WriteLine("Agency Sub Elment Code:" + user.AgencySubElementCode);
-            Console.WriteLine("Birth Date:" + user.BirthDate);
-            Console.WriteLine("SSN:" + user.SocialSecurityNumber);
-            Console.WriteLine("Language:" + user.Language);
-            Console.WriteLine("Time Zone:" + user.TimeZone);
+            Console.WriteLine("EHRI Employee ID: " + user.EHRIEmployeeID);
+            Console.WriteLine("Agency Sub Elment Code: " + user.AgencySubElementCode);
+            Console.WriteLine("Birth Date: " + user.BirthDate);
+            Console.WriteLine("SSN: " + user.SocialSecurityNumber);
+            Console.WriteLine("Language: " + user.Language);
+            Console.WriteLine("Time Zone: " + user.TimeZone);
+            Console.WriteLine("Receive Automated Emails: " + user.ReceiveAutomatedEmails);
 
             Console.WriteLine("Default Role: " + user.DefaultRoleName);
             foreach (var thisRole in user.RoleNames) {
