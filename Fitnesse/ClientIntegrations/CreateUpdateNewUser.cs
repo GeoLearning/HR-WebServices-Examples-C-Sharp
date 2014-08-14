@@ -35,7 +35,6 @@ public class CreateUpdateNewUser : WebServiceTestBase
     public string DefaultGroup { get; set; }
     public string Owner { get; set; }
     public bool Optin { get; set; }
-    public string Delivery { get; set; }
 
     public virtual bool Create()
     {
@@ -86,17 +85,6 @@ public class CreateUpdateNewUser : WebServiceTestBase
         emptyUser.CatalogAccessCodeNames = GetBlankOrValueArray(Cac);
         emptyUser.DirectSupervisorName = DirectSupervisor;
         emptyUser.Owner = GetOwner();
-        emptyUser.Delivery = GetNotificationDeliveryType();
-    }
-
-    private NotificationDelivery GetNotificationDeliveryType()
-    {
-        if (string.IsNullOrEmpty(Delivery))
-        {
-            return NotificationDelivery.Immediate;
-        }
-        return (NotificationDelivery)Enum.Parse(typeof(NotificationDelivery), Delivery);
-
     }
 
     private ProfileOwner GetOwner()

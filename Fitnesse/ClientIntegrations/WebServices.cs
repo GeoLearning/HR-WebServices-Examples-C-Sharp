@@ -531,9 +531,7 @@ public partial class User : Persistent {
     private bool receiveAutomatedEmailsField;
     
     private ProfileOwner ownerField;
-
-    private NotificationDelivery deliveryField;
-    
+   
     public User() {
         this.receiveAutomatedEmailsField = true;
     }
@@ -908,16 +906,6 @@ public partial class User : Persistent {
             this.ownerField = value;
         }
     }
-
-    /// <remarks/>
-    public NotificationDelivery Delivery {
-        get {
-            return this.deliveryField;
-        }
-        set {
-            this.deliveryField = value;
-        }
-    }
 }
 
 /// <remarks/>
@@ -1148,19 +1136,6 @@ public enum ProfileOwner {
     
     /// <remarks/>
     SumTotal,
-}
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("wsdl", "2.0.50727.3038")]
-[System.SerializableAttribute()]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://geolearning.com/geonext/webservices/")]
-public enum NotificationDelivery {
-
-    /// <remarks/>
-    Immediate,
-
-    /// <remarks/>
-    Daily,
 }
 
 /// <remarks/>
